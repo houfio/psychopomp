@@ -21,6 +21,13 @@
   "bugs": {
     "url": "https://github.com/houfio/psychopomp/issues"
   },
+  "tags": [
+    "react",
+    "react-component",
+    "walkthrough",
+    "guide",
+    "tour"
+  ],
   "homepage": "https://github.com/houfio/psychopomp#readme",
   "dependencies": {
     "prop-types": "^15.0.0",
