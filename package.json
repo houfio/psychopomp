@@ -1,7 +1,7 @@
 {
   "name": "psychopomp",
   "version": "1.0.1",
-  "description": "React tour component",
+  "description": "Customizable walkthroughs for your React app",
   "main": "./lib/index.js",
   "umd": "./lib/index.umd.js",
   "types": "./lib/index.d.ts",
