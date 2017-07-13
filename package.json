@@ -1,0 +1,43 @@
+{
+  "name": "psychopomp",
+  "version": "1.0.0",
+  "description": "React tour component",
+  "main": "./lib/index.js",
+  "umd": "./lib/index.umd.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "clean": "rimraf lib",
+    "bundle:watch": "webpack --env dev",
+    "bundle": "NODE_ENV=production webpack --env prod",
+    "build": "NODE_ENV=production npm run clean && tsc --declaration true && npm run bundle",
+    "start": "webpack-dev-server --env demo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/houfio/psychopomp.git"
+  },
+  "author": "houfio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/houfio/psychopomp/issues"
+  },
+  "homepage": "https://github.com/houfio/psychopomp#readme",
+  "dependencies": {
+    "prop-types": "^15.0.0",
+    "react": "^15.0.0",
+    "react-scroll": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/prop-types": "^15.5.1",
+    "@types/react": "^15.0.34",
+    "@types/react-dom": "^15.5.1",
+    "@types/react-scroll": "^1.5.1",
+    "react-dom": "^15.6.1",
+    "react-hot-loader": "^3.0.0-beta.7",
+    "ts-loader": "^2.2.2",
+    "typescript": "^2.4.1",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
