@@ -1,2 +1,5 @@
+config/
 demo/
 src/
+tsconfig.json
+webpack.config.js
