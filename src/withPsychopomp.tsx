@@ -12,7 +12,7 @@ export interface PsychopompHOCProps<T> {
   stop: () => void;
   toNext: () => void;
   toPrevious: () => void;
-  toIndex: (to: number) => void;
+  toIndex: (index: number) => void;
 }
 
 export const withPsychopomp = <T, P extends PsychopompHOCProps<T>, S>(WrappedComponent: new (props?: P, context?: any) => Component<P, S>): new () => Component<Partial<P>, S> => {
