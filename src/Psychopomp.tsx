@@ -190,7 +190,12 @@ export class Psychopomp<T> extends Component<PsychopompProps<T>, PsychopompState
   };
 
   public render(): JSX.Element {
-    const { children, ...props } = this.props;
+    const { children } = this.props;
+    const props = { ...this.props };
+
+    for (let type in Psychopomp.propTypes) {
+      delete props[type];
+    }
 
     return (
       <div {...props}>
