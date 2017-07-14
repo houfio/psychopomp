@@ -33,7 +33,7 @@ export class Root extends Component {
     };
 
     return (
-      <Psychopomp overlay={AppOverlay} defaultPayload={defaultPayload} options={options} middleware={middleware}>
+      <Psychopomp overlay={AppOverlay} defaultPayload={defaultPayload} options={options} middleware={middleware} className="demo">
         <Demo/>
       </Psychopomp>
     );

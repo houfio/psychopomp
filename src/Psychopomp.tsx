@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Component, ComponentClass } from 'react';
+import { Component, ComponentClass, HTMLAttributes, ReactNode } from 'react';
 import { animateScroll } from 'react-scroll';
-import { any, object, func } from 'prop-types';
+import { node, any, object, func } from 'prop-types';
 
 import {
   Overlay,
@@ -19,7 +19,8 @@ import {
   ToPreviousAction
 } from '.';
 
-export interface PsychopompProps<T> {
+export interface PsychopompProps<T> extends HTMLAttributes<HTMLDivElement> {
+  children: ReactNode;
   overlay: ComponentClass;
   defaultPayload: T;
   options?: PsychopompOptions;
@@ -49,6 +50,7 @@ export class Psychopomp<T> extends Component<PsychopompProps<T>, PsychopompState
   }
 
   public static propTypes: object = {
+    children: node.isRequired,
     overlay: any.isRequired,
     defaultPayload: object.isRequired,
     options: object,
@@ -188,10 +190,10 @@ export class Psychopomp<T> extends Component<PsychopompProps<T>, PsychopompState
   };
 
   public render(): JSX.Element {
-    const { children } = this.props;
+    const { children, ...props } = this.props;
 
     return (
-      <div>
+      <div {...props}>
         {this.createOverlay()}
         {children}
       </div>

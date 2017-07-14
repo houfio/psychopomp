@@ -62,7 +62,7 @@ export const AppOverlay = withPsychopomp(class AppOverlay extends Component<Psyc
         <div style={styles.top}>
           <button onClick={toPrevious} disabled={index == 0}>&lt;</button>
           <div style={styles.steps}>
-            {Array.apply(undefined, new Array(steps.length)).map((value, key) => {
+            {Array.apply(undefined, new Array(steps.length)).map((value: undefined, key: number) => {
               return (
                 <div key={key} style={{...styles.step, opacity: index > key ? .1 : index < key ? 1 : .5}}/>
               )
