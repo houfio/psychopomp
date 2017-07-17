@@ -18,6 +18,7 @@ import {
   ToNextAction,
   ToPreviousAction
 } from '.';
+import { SelectorNotFoundAction } from './actions';
 
 export interface PsychopompProps<T> extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
@@ -229,12 +230,8 @@ export class Psychopomp<T> extends Component<PsychopompProps<T>, PsychopompState
         width: targetRect.width + offset * 2,
         height: targetRect.height + offset * 2
       };
-    }
-
-    if (!this.lastTarget) {
-      this.stop();
-
-      return false;
+    } else {
+      this.emitAction(new SelectorNotFoundAction(this, steps, index, step.selector), () => {})
     }
 
     return (

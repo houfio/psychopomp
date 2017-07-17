@@ -8,6 +8,7 @@ import {
   TO_NEXT_ACTION,
   TO_PREVIOUS_ACTION
 } from '.';
+import { SELECTOR_NOT_FOUND_ACTION } from './constants';
 
 export class Action<T, A> {
   public readonly start: (steps: Steps<T>) => void;
@@ -55,9 +56,16 @@ export class ToIndexAction<T> extends Action<T, typeof TO_INDEX_ACTION> {
   }
 }
 
+export class SelectorNotFoundAction<T> extends Action<T, typeof SELECTOR_NOT_FOUND_ACTION> {
+  public constructor(psychopomp: Psychopomp<T>, public readonly steps: Step<T>[], public readonly index: number, public readonly selector: string) {
+    super(SELECTOR_NOT_FOUND_ACTION, psychopomp);
+  }
+}
+
 export type PsychopompAction<T> =
   StartAction<T>
   | StopAction<T>
   | ToNextAction<T>
   | ToPreviousAction<T>
-  | ToIndexAction<T>;
+  | ToIndexAction<T>
+  | SelectorNotFoundAction<T>;
