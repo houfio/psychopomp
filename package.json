@@ -1,6 +1,6 @@
 {
   "name": "psychopomp",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Customizable walkthroughs for your React app",
   "main": "./lib/index.js",
   "umd": "./lib/index.umd.js",
