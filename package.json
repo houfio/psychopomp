@@ -1,7 +1,7 @@
 {
   "name": "psychopomp",
   "version": "2.0.0",
-  "description": "Pretty walkthroughs for React applications",
+  "description": "Pretty walkthroughs for React applications.",
   "main": "./lib/index.js",
   "umd": "./lib/index.umd.js",
   "types": "./lib/index.d.ts",
