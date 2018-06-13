@@ -1,50 +1,74 @@
 {
   "name": "psychopomp",
-  "version": "1.2.0",
-  "description": "Customizable walkthroughs for your React app",
+  "version": "2.0.0",
+  "description": "Pretty walkthroughs for React applications",
   "main": "./lib/index.js",
   "umd": "./lib/index.umd.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "clean": "rimraf lib",
-    "bundle:watch": "webpack --env dev",
-    "bundle": "NODE_ENV=production webpack --env prod",
-    "build": "NODE_ENV=production npm run clean && tsc --declaration true && npm run bundle",
-    "start": "webpack-dev-server --env demo"
+    "prebuild": "npm run lint && npm run test",
+    "build": "rimraf lib/ && tsc --declaration && webpack",
+    "test": "jest",
+    "lint": "tslint \"src/**/*.ts?(x)\"",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/houfio/psychopomp.git"
   },
+  "keywords": [
+    "react",
+    "walkthrough"
+  ],
+  "files": [
+    "src/",
+    "lib/"
+  ],
   "author": "houfio",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/houfio/psychopomp/issues"
   },
-  "keywords": [
-    "react",
-    "react-component",
-    "walkthrough",
-    "guide",
-    "tour"
-  ],
   "homepage": "https://github.com/houfio/psychopomp#readme",
-  "dependencies": {
-    "prop-types": "^15.0.0",
-    "react": "^15.0.0",
-    "react-scroll": "^1.0.0"
+  "peerDependencies": {
+    "dakpan": "^1.2.0",
+    "react": "^16.3.0"
   },
   "devDependencies": {
-    "@types/prop-types": "^15.5.1",
-    "@types/react": "^15.0.34",
-    "@types/react-dom": "^15.5.1",
-    "@types/react-scroll": "^1.5.1",
-    "react-dom": "^15.6.1",
-    "react-hot-loader": "^3.0.0-beta.7",
-    "ts-loader": "^2.2.2",
-    "typescript": "^2.4.1",
-    "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.5.0",
-    "webpack-node-externals": "^1.6.0"
+    "@types/enzyme": "^3.1.10",
+    "@types/jest": "^23.0.0",
+    "@types/react": "^16.3.16",
+    "dakpan": "^1.2.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.1.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^22.4.6",
+    "ts-loader": "^4.3.1",
+    "tslint": "^5.10.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^2.9.2",
+    "webpack": "^4.11.1",
+    "webpack-cli": "^3.0.6",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "\\.test\\.tsx?$",
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "ts",
+      "tsx"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }

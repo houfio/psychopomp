@@ -1,29 +1,15 @@
 {
   "compilerOptions": {
-    "outDir": "lib",
+    "target": "es6",
     "module": "commonjs",
-    "target": "es5",
-    "lib": [
-      "es6",
-      "dom"
-    ],
-    "sourceMap": true,
     "jsx": "react",
-    "moduleResolution": "node",
-    "rootDirs": [
-      "node_modules",
-      "src"
-    ],
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-    "strictNullChecks": true
+    "rootDir": "./src",
+    "outDir": "./lib",
+    "sourceMap": true,
+    "strict": true
   },
   "exclude": [
-    "node_modules",
-    "demo",
-    "lib"
+    "**/*.test.ts",
+    "**/*.test.tsx"
   ]
 }

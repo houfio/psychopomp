@@ -1,19 +1,15 @@
-Psychopomp
-====
-Customizable walkthroughs for your React app
+# Psychopomp [![npm version](https://badge.fury.io/js/psychopomp.svg)](https://www.npmjs.com/package/psychopomp)
+Pretty walkthroughs for React applications
 
-[![npm](https://img.shields.io/npm/v/psychopomp.svg?style=flat-square)](https://www.npmjs.com/package/psychopomp)
-[![npm](https://img.shields.io/npm/l/psychopomp.svg?style=flat-square)](https://www.npmjs.com/package/psychopomp)
-[![npm](https://img.shields.io/npm/dw/psychopomp.svg?style=flat-square)](https://www.npmjs.com/package/psychopomp)
-
-Installation
-----
-Psychopomp requires `react@^15.0.0`, `prop-types@^15.0.0` and `react-scroll@^1.0.0`
-
+## Install
 ```
-npm install --save psychopomp
+npm install psychopomp
+```
+or
+```
+yarn add psychopomp
 ```
 
-Getting Started
-----
-See the `demo` directory for a simple Psychopomp setup.
+## Example
+
+## Documentation

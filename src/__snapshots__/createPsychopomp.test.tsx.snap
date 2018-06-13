@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`does stuff 1`] = `
+<Psychopomp>
+  <Provider>
+    <WithDakpan>
+      <Consumer>
+        <Component>
+          <span>
+            Psychopomp
+          </span>
+        </Component>
+      </Consumer>
+    </WithDakpan>
+    <span>
+      Test
+    </span>
+  </Provider>
+</Psychopomp>
+`;

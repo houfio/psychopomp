@@ -1,34 +1,3 @@
 # Changelog
-All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
-
-## 1.2.0 - 2017-07-17
-### Added
-- Add new SelectorNotFound action
-
-### Fixed
-- Fix crash when first selector cannot found
-
-## 1.1.2 - 2017-07-15
-### Fixed
-- Fix warning about unknown props
-
-## 1.1.1 - 2017-07-15
-### Fixed
-- Fix code not publishing :^)
-
-## 1.1.0 - 2017-07-15
-### Added
-- Add div prop types to psychopomp root component
-
-### Fixed
-- Fix build scripts bundling with library
-
-## 1.0.1 - 2017-07-13
-### Fixed
-- Fix invalid prop types
-
-## 1.0.0 - 2017-07-13
-- Initial release
+Release notes can be found on the [Github Releases](https://github.com/houfio/psychopomp/releases) page.
